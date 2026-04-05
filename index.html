@@ -6,14 +6,13 @@
     <title>Petr Šupa | Cognitive Neuroscientist</title>
     
     <style>
-        /* === THE UPGRADED COLOR PALETTE === */
         :root {
             --bg-color: #FAFAFA; 
             --text-main: #111111; 
             --blue-trust: #2563EB; 
             --yellow-highlight: #DFFF00; 
             --pink-purple: linear-gradient(135deg, #FF007F, #8A2BE2); 
-            --dot-color: #d1d5db; /* Color for the background grid */
+            --dot-color: #d1d5db; 
         }
 
         * {
@@ -29,7 +28,6 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-color);
-            /* NEW: Adds a cool subtle dot grid background! */
             background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
             background-size: 20px 20px;
             color: var(--text-main);
@@ -45,7 +43,7 @@
             position: sticky;
             top: 0;
             background: rgba(250, 250, 250, 0.8);
-            backdrop-filter: blur(12px); /* Makes the nav bar cool and frosted */
+            backdrop-filter: blur(12px); 
             z-index: 100;
             border-bottom: 3px solid var(--text-main);
         }
@@ -53,7 +51,7 @@
         nav a {
             text-decoration: none;
             color: var(--text-main);
-            font-weight: 800; /* Bolder text */
+            font-weight: 800; 
             text-transform: uppercase;
             font-size: 0.95rem;
             transition: all 0.2s;
@@ -75,7 +73,7 @@
         section {
             margin-bottom: 90px;
             padding-top: 60px;
-            background: #fff; /* White background behind text to pop off the grid */
+            background: #fff; 
             border: 3px solid var(--text-main);
             padding: 30px;
             border-radius: 16px;
@@ -85,7 +83,7 @@
         h1, h2, h3 {
             line-height: 1.2;
             margin-bottom: 20px;
-            font-weight: 900; /* Extra bold headers */
+            font-weight: 900; 
         }
 
         h2 {
@@ -95,11 +93,10 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 30px;
-            border-bottom: 4px solid var(--yellow-highlight); /* Cool underline */
+            border-bottom: 4px solid var(--yellow-highlight); 
             padding-bottom: 5px;
         }
 
-        /* UPGRADED HERO SECTION */
         .hero {
             text-align: center;
             background: transparent;
@@ -115,14 +112,14 @@
             height: 220px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid var(--text-main); /* Harsher outline */
+            border: 4px solid var(--text-main); 
             box-shadow: 10px 10px 0px var(--blue-trust); 
             margin-bottom: 25px;
             transition: transform 0.3s ease;
         }
 
         .profile-pic:hover {
-            transform: scale(1.05) rotate(3deg); /* Fun slight tilt when hovered */
+            transform: scale(1.05) rotate(3deg); 
         }
 
         .tag {
@@ -137,7 +134,6 @@
             border: 2px solid var(--text-main);
         }
 
-        /* NEW: SCROLLING MARQUEE EFFECT */
         .marquee-wrapper {
             width: 100%;
             overflow: hidden;
@@ -147,7 +143,7 @@
             margin: 40px 0 60px 0;
             border-top: 3px solid var(--text-main);
             border-bottom: 3px solid var(--text-main);
-            transform: rotate(-1deg); /* Slight edgy tilt */
+            transform: rotate(-1deg); 
         }
 
         .marquee {
@@ -168,26 +164,48 @@
             to { transform: translateX(-50%); }
         }
 
-        /* UPGRADED RESEARCH CARDS */
+        /* UPGRADED RESEARCH CARDS FOR LINKS */
         .card {
+            display: block; /* Makes the link act like a box */
+            text-decoration: none; /* Removes the default blue underline from links */
+            color: inherit; /* Keeps your text color normal */
             background: #fff;
             border: 3px solid var(--text-main);
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 25px;
             box-shadow: 8px 8px 0px var(--blue-trust);
-            transition: all 0.1s ease; /* Faster, punchier transition */
+            transition: all 0.1s ease; 
+            cursor: pointer; /* Makes the mouse look like a clicking hand */
+            position: relative;
         }
 
-        /* The physical "button press" effect */
+        /* Adds a tiny "Click to read" text that appears on hover */
+        .card::after {
+            content: "Read More ↗";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-weight: bold;
+            color: var(--blue-trust);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .card:hover::after {
+            opacity: 1;
+        }
+
         .card:hover {
             transform: translate(4px, 4px);
             box-shadow: 4px 4px 0px var(--blue-trust);
+            background-color: #f8faff; /* Very subtle blue tint on hover */
         }
 
         .card h3 {
             margin-bottom: 10px;
             font-size: 1.4rem;
+            padding-right: 100px; /* Leaves space for the 'Read More' text */
         }
         
         .card p.location {
@@ -201,7 +219,6 @@
             margin-bottom: 15px;
         }
 
-        /* UPGRADED CONTACT BUTTONS */
         .contact-links {
             display: flex;
             flex-direction: column;
@@ -272,23 +289,23 @@
         <section id="researcher">
             <h2>Researcher</h2>
             
-            <div class="card">
+            <a href="javascript:void(0);" class="card">
                 <h3>Gender-Affirming Hormone Therapy & Emotion Control</h3>
                 <p class="location">Medical Psychology, Amsterdam UMC</p>
                 <p>Major Master's project examining gender-affirming hormone therapy and emotion-regulation changes via Bayesian hierarchical models in a prospective transgender cohort.</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="javascript:void(0);" class="card">
                 <h3>Psilocybin Pre-vs-post EMA Analysis</h3>
                 <p class="location">Emory University School of Medicine, USA</p>
                 <p>Remote collaboration focusing on the added value of multi-day ecological momentary assessment (EMA) in capturing circadian rhythm-like fluctuations related to naturalistic psilocybin use.</p>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="javascript:void(0);" class="card">
                 <h3>The Effect of Psilocybin on Emotion Recognition</h3>
                 <p class="location">Psychedelic Research Center, NIMH, Czechia</p>
                 <p>Preregistered project on behavioral mechanisms of psilocybin's positive therapeutic change, with links to depression and mood self-report outcomes.</p>
-            </div>
+            </a>
         </section>
 
         <section id="thought-leader">
