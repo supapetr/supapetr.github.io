@@ -1,340 +1,1069 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Petr Šupa | Cognitive Neuroscientist</title>
-    
-    <style>
-        :root {
-            --bg-color: #FAFAFA; 
-            --text-main: #111111; 
-            --blue-trust: #2563EB; 
-            --yellow-highlight: #DFFF00; 
-            --pink-purple: linear-gradient(135deg, #FF007F, #8A2BE2); 
-            --dot-color: #d1d5db; 
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <title>Petr Šupa | Cognitive Neuroscience & Behavioural Science</title>
+  <meta name="description" content="Academic profile of Petr Šupa: cognitive neuroscience, behavioural science, longitudinal methods, Bayesian modelling, and psychedelic research.">
+  <meta name="author" content="Petr Šupa">
+  <meta name="theme-color" content="#f4f2ec">
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta property="og:title" content="Petr Šupa | Academic Profile">
+  <meta property="og:description" content="Cognitive neuroscience, behavioural science, Bayesian modelling, and psychedelic research.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="Supa_Petr_profilepic.jpg">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-            background-size: 20px 20px;
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 0 20px;
-        }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Petr Šupa",
+    "url": "https://supapetr.github.io/",
+    "image": "https://supapetr.github.io/Supa_Petr_profilepic.jpg",
+    "jobTitle": "Cognitive Neuroscience and Behavioural Science Researcher",
+    "sameAs": [
+      "https://www.linkedin.com/in/petrsupa/",
+      "https://orcid.org/0009-0007-9341-5959",
+      "https://osf.io/utfa4/"
+    ]
+  }
+  </script>
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            background: rgba(250, 250, 250, 0.8);
-            backdrop-filter: blur(12px); 
-            z-index: 100;
-            border-bottom: 3px solid var(--text-main);
-        }
+  <style>
+    :root {
+      --paper: #f4f2ec;
+      --surface: #ffffff;
+      --ink: #161616;
+      --muted: #686868;
+      --line: #d9d6ce;
+      --accent: #5b4bdb;
+      --accent-soft: #ece9ff;
+      --highlight: #dfff00;
+      --max-width: 1120px;
+      --radius: 22px;
+      --shadow: 0 18px 50px rgba(24, 24, 24, 0.08);
+    }
 
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 800; 
-            text-transform: uppercase;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            padding: 5px 10px;
-            border-radius: 8px;
-        }
+    * { box-sizing: border-box; }
 
-        nav a:hover {
-            background-color: var(--yellow-highlight);
-            color: #000;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 5%, rgba(91, 75, 219, 0.11), transparent 28rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      text-rendering: optimizeLegibility;
+    }
 
-        section {
-            margin-bottom: 90px;
-            padding-top: 60px;
-            background: #fff; 
-            border: 3px solid var(--text-main);
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 8px 8px 0px rgba(0,0,0,0.05);
-        }
+    a { color: inherit; }
+    img { max-width: 100%; }
 
-        h1, h2, h3 {
-            line-height: 1.2;
-            margin-bottom: 20px;
-            font-weight: 900; 
-        }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(22, 22, 22, 0.1);
+      background: rgba(244, 242, 236, 0.88);
+      backdrop-filter: blur(16px);
+    }
 
-        h2 {
-            font-size: 2.5rem;
-            display: inline-block;
-            background: var(--pink-purple);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 30px;
-            border-bottom: 4px solid var(--yellow-highlight); 
-            padding-bottom: 5px;
-        }
+    .nav-inner {
+      width: min(var(--max-width), calc(100% - 40px));
+      min-height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-        .hero {
-            text-align: center;
-            background: transparent;
-            border: none;
-            box-shadow: none;
-            padding: 0;
-            margin-top: 20px;
-            margin-bottom: 40px;
-        }
+    .brand {
+      font-weight: 850;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-        .profile-pic {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid var(--text-main); 
-            box-shadow: 10px 10px 0px var(--blue-trust); 
-            margin-bottom: 25px;
-            transition: transform 0.3s ease;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
 
-        .profile-pic:hover {
-            transform: scale(1.05) rotate(3deg); 
-        }
+    .nav-links a {
+      padding: 8px 11px;
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 720;
+      text-decoration: none;
+    }
 
-        .tag {
-            background-color: var(--yellow-highlight);
-            color: #000;
-            padding: 6px 18px;
-            border-radius: 30px;
-            font-weight: 800;
-            font-size: 0.95rem;
-            display: inline-block;
-            margin: 5px;
-            border: 2px solid var(--text-main);
-        }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      color: var(--ink);
+      background: var(--surface);
+      outline: none;
+    }
 
-        .marquee-wrapper {
-            width: 100%;
-            overflow: hidden;
-            background: var(--text-main);
-            color: #fff;
-            padding: 12px 0;
-            margin: 40px 0 60px 0;
-            border-top: 3px solid var(--text-main);
-            border-bottom: 3px solid var(--text-main);
-            transform: rotate(-1deg); 
-        }
+    main {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-        .marquee {
-            display: flex;
-            white-space: nowrap;
-            animation: scrollText 20s linear infinite;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+    .hero {
+      min-height: calc(100vh - 70px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.55fr);
+      align-items: center;
+      gap: clamp(36px, 7vw, 88px);
+      padding: 70px 0 82px;
+    }
 
-        .marquee span {
-            margin: 0 30px;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 20px;
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 850;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
 
-        @keyframes scrollText {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
-        }
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
 
-        /* UPGRADED RESEARCH CARDS FOR LINKS */
-        .card {
-            display: block; /* Makes the link act like a box */
-            text-decoration: none; /* Removes the default blue underline from links */
-            color: inherit; /* Keeps your text color normal */
-            background: #fff;
-            border: 3px solid var(--text-main);
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 8px 8px 0px var(--blue-trust);
-            transition: all 0.1s ease; 
-            cursor: pointer; /* Makes the mouse look like a clicking hand */
-            position: relative;
-        }
+    h1, h2, h3 {
+      margin-top: 0;
+      line-height: 1.08;
+      letter-spacing: -0.045em;
+    }
 
-        /* Adds a tiny "Click to read" text that appears on hover */
-        .card::after {
-            content: "Read More ↗";
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-weight: bold;
-            color: var(--blue-trust);
-            opacity: 0;
-            transition: opacity 0.2s;
-        }
+    h1 {
+      max-width: 860px;
+      margin-bottom: 22px;
+      font-size: clamp(3.3rem, 8.5vw, 7.1rem);
+      font-weight: 900;
+    }
 
-        .card:hover::after {
-            opacity: 1;
-        }
+    h1 span {
+      position: relative;
+      display: inline-block;
+      z-index: 0;
+    }
 
-        .card:hover {
-            transform: translate(4px, 4px);
-            box-shadow: 4px 4px 0px var(--blue-trust);
-            background-color: #f8faff; /* Very subtle blue tint on hover */
-        }
+    h1 span::after {
+      content: "";
+      position: absolute;
+      left: -0.04em;
+      right: -0.04em;
+      bottom: 0.06em;
+      height: 0.18em;
+      z-index: -1;
+      background: var(--highlight);
+      transform: rotate(-1deg);
+    }
 
-        .card h3 {
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-            padding-right: 100px; /* Leaves space for the 'Read More' text */
-        }
-        
-        .card p.location {
-            display: inline-block;
-            background: var(--blue-trust);
-            color: #fff;
-            padding: 4px 10px;
-            border-radius: 6px;
-            font-weight: bold;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
+    .hero-copy {
+      max-width: 760px;
+      margin: 0 0 28px;
+      color: #3f3f3f;
+      font-size: clamp(1.08rem, 1.7vw, 1.32rem);
+    }
 
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-        .contact-btn {
-            display: block;
-            text-align: center;
-            padding: 18px;
-            border: 3px solid var(--text-main);
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 800;
-            font-size: 1.3rem;
-            background: #fff;
-            box-shadow: 6px 6px 0px var(--pink-purple);
-            transition: all 0.1s ease;
-        }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 48px;
+      padding: 11px 18px;
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+    }
 
-        .contact-btn:hover {
-            background: var(--yellow-highlight);
-            transform: translate(3px, 3px);
-            box-shadow: 3px 3px 0px var(--text-main);
-        }
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
 
-    </style>
+    .button:hover,
+    .button:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 9px 22px rgba(22, 22, 22, 0.13);
+      outline: none;
+    }
+
+    .portrait-wrap {
+      justify-self: center;
+      position: relative;
+      width: min(330px, 76vw);
+      aspect-ratio: 1;
+    }
+
+    .portrait-wrap::before {
+      content: "";
+      position: absolute;
+      inset: 8% -7% -7% 8%;
+      border-radius: 38% 62% 56% 44% / 47% 40% 60% 53%;
+      background: var(--accent);
+      transform: rotate(5deg);
+    }
+
+    .portrait {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid var(--ink);
+      border-radius: 46% 54% 45% 55% / 52% 42% 58% 48%;
+      box-shadow: var(--shadow);
+    }
+
+    .section {
+      padding: 96px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 40px;
+      align-items: start;
+      margin-bottom: 44px;
+    }
+
+    .kicker {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-weight: 850;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: clamp(2.25rem, 5vw, 4.6rem);
+      font-weight: 900;
+    }
+
+    .section-intro {
+      max-width: 680px;
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .stat {
+      min-height: 155px;
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 7px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.4;
+    }
+
+    .education-grid, .project-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .panel {
+      padding: clamp(24px, 4vw, 36px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel.featured {
+      border-color: rgba(91, 75, 219, 0.35);
+      background:
+        linear-gradient(135deg, rgba(91, 75, 219, 0.08), transparent 58%),
+        var(--surface);
+    }
+
+    .panel-label, .project-meta {
+      margin: 0 0 12px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 850;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .panel h3 {
+      margin-bottom: 9px;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .record {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 31px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #4437a8;
+      font-size: 0.82rem;
+      font-weight: 790;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 0;
+      max-width: 900px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 28px;
+      padding: 24px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-time {
+      color: var(--accent);
+      font-weight: 850;
+    }
+
+    .timeline-item h3 {
+      margin-bottom: 7px;
+      font-size: 1.22rem;
+      letter-spacing: -0.025em;
+    }
+
+    .timeline-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .project-card {
+      position: relative;
+      display: flex;
+      min-height: 320px;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .project-card h3 { padding-right: 30px; }
+
+    .project-card .project-number {
+      position: absolute;
+      top: 22px;
+      right: 24px;
+      color: #c6c0fb;
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.08em;
+    }
+
+    .project-card .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: auto;
+      padding-top: 26px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--ink);
+      font-size: 0.92rem;
+      font-weight: 820;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 4px;
+    }
+
+    .text-link:hover, .text-link:focus-visible {
+      color: var(--accent);
+      outline: none;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .skill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list li {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      font-weight: 720;
+    }
+
+    .highlight-list {
+      display: grid;
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .highlight-list li {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .highlight-list li:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+
+    .highlight-list strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .highlight-list span { color: var(--muted); }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: end;
+      padding: clamp(30px, 6vw, 64px);
+      border-radius: 30px;
+      background: var(--ink);
+      color: #fff;
+    }
+
+    .contact-card h2 {
+      max-width: 780px;
+      margin-bottom: 16px;
+    }
+
+    .contact-card p {
+      max-width: 680px;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 1.05rem;
+    }
+
+    .contact-links {
+      display: grid;
+      gap: 10px;
+    }
+
+    .contact-links a {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+      color: #fff;
+      font-weight: 780;
+      text-decoration: none;
+    }
+
+    .contact-links a:hover, .contact-links a:focus-visible {
+      color: var(--highlight);
+      outline: none;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 28px 0 42px;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    footer a {
+      color: inherit;
+      text-underline-offset: 3px;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .section-heading, .skills-grid, .contact-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 56px;
+      }
+
+      .portrait-wrap {
+        grid-row: 1;
+        width: min(270px, 72vw);
+        justify-self: start;
+      }
+
+      .stats { grid-template-columns: repeat(2, 1fr); }
+
+      .contact-card { align-items: start; }
+    }
+
+    @media (max-width: 680px) {
+      main, .nav-inner {
+        width: min(100% - 26px, var(--max-width));
+      }
+
+      .nav-inner { min-height: 62px; }
+
+      .nav-links a:not(.nav-cv) { display: none; }
+
+      .section { padding: 72px 0; }
+
+      .education-grid, .project-grid, .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
+      .stat { min-height: 125px; }
+
+      footer { flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    @media print {
+      .site-nav, .button-row, .contact-card, footer {
+        display: none !important;
+      }
+
+      body { background: #fff; }
+      main { width: 100%; }
+
+      .hero {
+        min-height: auto;
+        padding: 20px 0 40px;
+      }
+
+      .section {
+        break-inside: avoid;
+        padding: 35px 0;
+      }
+
+      .panel, .stat { box-shadow: none; }
+    }
+  </style>
 </head>
+
 <body>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Petr Šupa</a>
 
-    <nav>
-        <a href="#story">Story</a>
-        <a href="#researcher">Researcher</a>
-        <a href="#thought-leader">Person</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="container">
-        
-        <div class="hero">
-            <img src="Supa_Petr_profilepic.jpg" alt="Petr Šupa" class="profile-pic">
-            
-            <h1>Petr Šupa</h1>
-            <span class="tag">Cognitive Neuroscience</span>
-            <span class="tag">Behavioural Science</span>
-            <p style="margin-top: 20px; font-size: 1.25rem; font-weight: 500;">Bridging the gap between complex empirical science and real-world impact.</p>
-        </div>
-
-        <div class="marquee-wrapper">
-            <div class="marquee">
-                <span>Empirical Methodology</span><span>✦</span>
-                <span>Bio-Psycho-Social Framework</span><span>✦</span>
-                <span>Psychedelic Research</span><span>✦</span>
-                <span>Diversity, Equity, Inclusion</span><span>✦</span>
-                <span>Empirical Methodology</span><span>✦</span>
-                <span>Bio-Psycho-Social Framework</span><span>✦</span>
-                <span>Psychedelic Research</span><span>✦</span>
-                <span>Diversity, Equity, Inclusion</span><span>✦</span>
-            </div>
-        </div>
-
-        <section id="story">
-            <h2>Story</h2>
-            <p style="font-size: 1.1rem;">I am currently a research intern at Medical Psychology department at Amsterdam UMC. Pursuing a double Research Master's at Radboud University in Cognitive Neuroscience and Behavioural Science. My journey started at Charles University in Prague, blending social sciences and humanities. Today, I am focused on "real-world problem" oriented research, prioritizing a people-centred approach, diversity, equity, and inclusion.</p>
-            <div style="background: var(--yellow-highlight); padding: 15px 20px; border: 3px solid var(--text-main); border-radius: 8px; margin-top: 25px; font-weight: bold; box-shadow: 4px 4px 0px var(--text-main); transform: rotate(1deg);">
-                📄 Want to dive deeper into my background? You can view and download my complete two-page academic history here: <a href="Šupa_Petr_CV.pdf" target="_blank" style="color: var(--blue-trust); text-decoration: underline; font-weight: 900;">View Full CV ↗</a>
-            </div>
-        </section>
-
-        <section id="researcher">
-            <h2>Researcher</h2>
-            
-            <a href="https://affirmrelationships.com/" class="card">
-                <h3>Gender-Affirming Hormone Therapy & Emotion Control</h3>
-                <p class="location">Medical Psychology, Amsterdam UMC</p>
-                <p>Major Master's project examining gender-affirming hormone therapy and emotion-regulation changes via Bayesian hierarchical models in a prospective transgender cohort.</p>
-            </a>
-
-            <a href="https://journals.sagepub.com/doi/10.1177/02698811241265756" class="card">
-                <h3>Psilocybin Pre-vs-post Ecological Sampling Analysis</h3>
-                <p class="location">Emory University School of Medicine, USA</p>
-                <p>Remote collaboration focusing on the added value of multi-day ecological momentary assessment (EMA) in capturing circadian rhythm-like fluctuations related to naturalistic psilocybin use.</p>
-            </a>
-
-            <a href="https://osf.io/qbv7r/overview" target="_blank" class="card">
-                <h3>The Effect of Psilocybin on Emotion Recognition</h3>
-                <p class="location">Psychedelic Research Center, NIMH, Czechia</p>
-                <p>Preregistered project on behavioral mechanisms of psilocybin's positive therapeutic change, with links to depression and mood self-report outcomes.</p>
-            </a>
-
-            <div style="background: var(--yellow-highlight); padding: 15px 20px; border: 3px solid var(--text-main); border-radius: 8px; margin-bottom: 25px; font-weight: bold; box-shadow: 4px 4px 0px var(--text-main); transform: rotate(-1deg);">
-                🌍 Open Science matters! You can view my complete research output, raw data, and preregistrations directly on my <a href="https://osf.io/utfa4/" target="_blank" style="color: var(--blue-trust); text-decoration: underline; font-weight: 900;">OSF Profile ↗</a>.
-            </div>
-        </section>
-
-        <section id="thought-leader">
-            <h2>Person</h2>
-            <p style="margin-bottom: 30px; font-size: 1.1rem;">Catch up with my latest thoughts and life snippets below.</p>
-            
-            <div style="background: #FAFAFA; border-radius: 12px; overflow: hidden; border: 3px solid var(--text-main);">
-                <script src="https://elfsightcdn.com/platform.js" async></script>
-                <div class="elfsight-app-173c5ee8-38d4-4026-811b-76006404e2d7" data-elfsight-app-lazy></div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <div class="contact-links">
-                <a href="mailto:p.supa@amsterdamumc.nl" class="contact-btn">📧 p.supa@amsterdamumc.nl</a>
-                <a href="https://www.linkedin.com/in/petrsupa/" target="_blank" class="contact-btn">💼 LinkedIn</a>
-                <a href="https://orcid.org/0009-0007-9341-5959" target="_blank" class="contact-btn">🔬 ORCID</a>
-            </div>
-        </section>
-
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#research">Research</a>
+        <a href="#skills">Methods</a>
+        <a class="nav-cv" href="./%C5%A0upa_Petr_CV_July%202026.pdf" target="_blank" rel="noopener">
+          CV ↗
+        </a>
+      </div>
     </div>
+  </nav>
 
+  <main id="top">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Cognitive neuroscience · behavioural science</p>
+        <h1>Petr <span>Šupa</span></h1>
+
+        <p class="hero-copy">
+          Researcher working across cognitive neuroscience, behavioural science,
+          mental health, and psychedelic research. I combine longitudinal and
+          person-specific data with Bayesian and multilevel methods to study
+          psychologically meaningful change in real-world contexts.
+        </p>
+
+        <div class="button-row">
+          <a class="button" href="./%C5%A0upa_Petr_CV_July%202026.pdf" target="_blank" rel="noopener">
+            View CV <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button secondary"
+             href="./%C5%A0upa%20Petr_Major%20Thesis_M.Sc._July%202026.pdf"
+             target="_blank"
+             rel="noopener">
+            Read major thesis <span aria-hidden="true">↗</span>
+          </a>
+
+          <a class="button secondary" href="https://www.linkedin.com/in/petrsupa/" target="_blank" rel="noopener">
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <img
+          class="portrait"
+          src="Supa_Petr_profilepic.jpg"
+          alt="Portrait of Petr Šupa"
+          width="700"
+          height="700"
+        >
+      </div>
+    </header>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Profile</p>
+          <h2>People-centred, methodologically rigorous research.</h2>
+        </div>
+
+        <p class="section-intro">
+          My work sits at the intersection of cognitive neuroscience,
+          clinical and social psychology, and open science. Across
+          Amsterdam UMC, Radboud University, Emory University, and the
+          National Institute of Mental Health in Czechia, I have worked
+          with prospective cohorts, behavioural experiments, clinical data,
+          ecological momentary assessment, and neurophysiological methods.
+        </p>
+      </div>
+
+      <div class="stats" aria-label="Academic highlights">
+        <article class="stat">
+          <strong>208</strong>
+          <span>ECTS across combined Research Master's coursework</span>
+        </article>
+
+        <article class="stat">
+          <strong>8.5</strong>
+          <span>Grade for the 42-ECTS major research project and thesis</span>
+        </article>
+
+        <article class="stat">
+          <strong>40+</strong>
+          <span>Undergraduate students supervised in quantitative research</span>
+        </article>
+
+        <article class="stat">
+          <strong>€12k</strong>
+          <span>Approximate value of individual grants and scholarships</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Education</p>
+          <h2>Two Research Master's programmes, one interdisciplinary foundation.</h2>
+        </div>
+
+        <p class="section-intro">
+          I completed concurrent Research Master's programmes at Radboud University,
+          following a Bachelor's degree in Humanities and Social Sciences at Charles
+          University and two Erasmus+ psychology exchanges in Nijmegen.
+        </p>
+      </div>
+
+      <div class="education-grid">
+        <article class="panel featured">
+          <p class="panel-label">Radboud University · 2023–2026</p>
+          <h3>MSc Behavioural Science (Research)</h3>
+          <p>
+            Methodology, statistics, clinical psychology, behavioural regulation,
+            and complex systems. Affiliated with the Behavioural Science Institute.
+          </p>
+          <div class="record">
+            <span class="pill">120 ECTS</span>
+            <span class="pill">Weighted judicium average: 8.351</span>
+            <span class="pill">Thesis: 8.5 / 10</span>
+          </div>
+        </article>
+
+        <article class="panel featured">
+          <p class="panel-label">Radboud University · 2024–2026</p>
+          <h3>MSc Cognitive Neuroscience (Research)</h3>
+          <p>
+            Development and lifelong plasticity specialisation, neuroimaging,
+            social neurocognition, neurogenetics, and electrophysiological methods.
+          </p>
+          <div class="record">
+            <span class="pill">137 ECTS completed</span>
+            <span class="pill">Weighted total: 8.160</span>
+            <span class="pill">Judicium average: 8.272</span>
+            <span class="pill">Neurophilosophy minor</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <p class="panel-label">Charles University · 2020–2023</p>
+          <h3>Bc. Humanities &amp; Social Sciences</h3>
+          <p>
+            Psychology major with an interdisciplinary humanities and social-science
+            foundation, including a Bachelor's project in sex research.
+          </p>
+          <div class="record">
+            <span class="pill">233 ECTS</span>
+            <span class="pill">Top 10% of students</span>
+            <span class="pill">Two Erasmus+ exchanges</span>
+          </div>
+        </article>
+
+        <article class="panel">
+          <p class="panel-label">Radboud Honours Academy</p>
+          <h3>Interdisciplinary honours training</h3>
+          <p>
+            Participatory and citizen science, an eight-month municipal impact
+            project, and a Beyond the Frontiers grant supporting an external
+            research internship.
+          </p>
+          <div class="record">
+            <span class="pill">Project Impact</span>
+            <span class="pill">Beyond the Frontiers</span>
+            <span class="pill">Cross-disciplinary collaboration</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Experience</p>
+          <h2>A cross-institutional research timeline.</h2>
+        </div>
+
+        <p class="section-intro">
+          Selected research affiliations and projects, ordered from the most recent
+          and ongoing work to earlier training.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item">
+          <div class="timeline-time">2025–present</div>
+          <div>
+            <h3>Emory University School of Medicine · Remote collaboration</h3>
+            <p>
+              Ecological momentary assessment of health symptoms and adverse effects
+              surrounding naturalistic psilocybin use, with emphasis on multi-day
+              within-person patterns.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-time">2024–present</div>
+          <div>
+            <h3>Amsterdam UMC · Medical Psychology</h3>
+            <p>
+              Major Master's internship in the AFFIRM Relationships project:
+              a prospective transgender cohort integrating clinical, behavioural,
+              and self-report data.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-time">Summer 2025</div>
+          <div>
+            <h3>National Institute of Mental Health, Czechia · Psychedelic Research Center</h3>
+            <p>
+              Externally funded research internship involving phase-I randomised
+              clinical-trial data, emotion-recognition research, and a scoping review.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-time">2023–present</div>
+          <div>
+            <h3>Radboud University · Teaching and research assistance</h3>
+            <p>
+              Research-methods teaching, supervision of more than 40 undergraduate
+              projects, and assistantships involving meta-analysis, intervention
+              development, and dynamic cluster analysis.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item">
+          <div class="timeline-time">2022–2023</div>
+          <div>
+            <h3>Charles University · Department of Psychology and Life Sciences</h3>
+            <p>
+              Bachelor's internship and project on primary sexual experiences and
+              later sexual trajectories in a diverse sample of 430 participants.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Selected research</p>
+          <h2>Longitudinal change, emotion, and mental health.</h2>
+        </div>
+
+        <p class="section-intro">
+          Projects combine behavioural paradigms, repeated measurements,
+          preregistration, and open-science workflows.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="panel project-card featured">
+          <span class="project-number" aria-hidden="true">01</span>
+          <p class="project-meta">Major Master's thesis · Amsterdam UMC</p>
+          <h3>Gender-affirming hormone therapy and emotional interference</h3>
+          <p>
+            Preregistered longitudinal study of emotional interference before and
+            three months after initiating gender-affirming hormone therapy, using
+            individualized Bayesian mixed-effects models in the AFFIRM cohort.
+          </p>
+          <div class="project-links">
+            <a class="text-link" href="https://osf.io/zt6qb/overview" target="_blank" rel="noopener">
+              OSF project ↗
+            </a>
+            <a class="text-link"
+               href="./%C5%A0upa%20Petr_Major%20Thesis_M.Sc._July%202026.pdf"
+               target="_blank"
+               rel="noopener">
+              Thesis PDF ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <span class="project-number" aria-hidden="true">02</span>
+          <p class="project-meta">Psychedelic Research Center · NIMH Czechia</p>
+          <h3>The effect of psilocybin on emotion recognition</h3>
+          <p>
+            First-author preregistered project examining behavioural mechanisms that
+            may accompany positive therapeutic change, linked to depression and mood
+            self-report outcomes.
+          </p>
+          <div class="project-links">
+            <a class="text-link" href="https://osf.io/qbv7r/overview" target="_blank" rel="noopener">
+              OSF project ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <span class="project-number" aria-hidden="true">03</span>
+          <p class="project-meta">Emory University School of Medicine</p>
+          <h3>Psilocybin and multi-day ecological sampling</h3>
+          <p>
+            Two projects evaluating the value of intensive repeated measurement for
+            detecting circadian-like fluctuations in health symptoms and adverse
+            experiences surrounding naturalistic psilocybin use.
+          </p>
+          <div class="project-links">
+            <a class="text-link" href="https://osf.io/utfa4/" target="_blank" rel="noopener">
+              OSF profile ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="panel project-card">
+          <span class="project-number" aria-hidden="true">04</span>
+          <p class="project-meta">Radboud University</p>
+          <h3>Behavioural biases and mental-health outcomes</h3>
+          <p>
+            Approach–avoidance responses to social-emotional facial stimuli in
+            relation to loneliness, depressive symptoms, and social anxiety among
+            young adults.
+          </p>
+          <div class="project-links">
+            <a class="text-link" href="./%C5%A0upa_Petr_CV_July%202026.pdf" target="_blank" rel="noopener">
+              Details in CV ↗
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <div>
+          <p class="kicker">Methods &amp; practice</p>
+          <h2>Tools for complex, person-specific data.</h2>
+        </div>
+
+        <p class="section-intro">
+          My methodological interests centre on intensive longitudinal designs,
+          multilevel inference, and research practices that remain interpretable
+          and useful outside the laboratory.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="panel">
+          <p class="panel-label">Methods and software</p>
+          <ul class="skill-list">
+            <li>Bayesian mixed-effects modelling</li>
+            <li>Multilevel modelling</li>
+            <li>Longitudinal data</li>
+            <li>Ecological momentary assessment</li>
+            <li>Behavioural experiments</li>
+            <li>EEG and electrophysiology</li>
+            <li>Neuroimaging</li>
+            <li>R / RStudio</li>
+            <li>Python / PsychoPy</li>
+            <li>MATLAB</li>
+            <li>Preregistration</li>
+            <li>Open science</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <p class="panel-label">Selected highlights</p>
+          <ul class="highlight-list">
+            <li>
+              <strong>Conference communication</strong>
+              <span>Two talks and a poster presented across three conferences in 2026.</span>
+            </li>
+            <li>
+              <strong>Teaching and supervision</strong>
+              <span>Research-methods teaching and supervision of 40+ undergraduate students.</span>
+            </li>
+            <li>
+              <strong>International collaboration</strong>
+              <span>Research experience across the Netherlands, Czechia, and the United States.</span>
+            </li>
+            <li>
+              <strong>Leadership</strong>
+              <span>Former chair of an education committee organising academic and career events.</span>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-card">
+        <div>
+          <p class="kicker" style="color: var(--highlight);">Contact</p>
+          <h2>Research is collaborative. Let’s connect.</h2>
+          <p>
+            For research collaboration, academic opportunities, or questions about
+            my work, contact me by email or through the profiles listed here.
+          </p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:p.supa@amsterdamumc.nl">
+            <span>Academic email</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="mailto:supapetrs@gmail.com">
+            <span>Personal email</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://www.linkedin.com/in/petrsupa/" target="_blank" rel="noopener">
+            <span>LinkedIn</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://orcid.org/0009-0007-9341-5959" target="_blank" rel="noopener">
+            <span>ORCID</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://osf.io/utfa4/" target="_blank" rel="noopener">
+            <span>OSF</span><span aria-hidden="true">↗</span>
+          </a>
+          <a href="https://github.com/supapetr" target="_blank" rel="noopener">
+            <span>GitHub</span><span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© 2026 Petr Šupa</span>
+      <span>Built as a lightweight, dependency-free GitHub Pages site.</span>
+    </footer>
+  </main>
 </body>
 </html>
