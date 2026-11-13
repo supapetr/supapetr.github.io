@@ -1,6 +1,7 @@
-Deasrest gentle reader,
+Dearest gentle reader,
 
-Welcome to my digital playground! Check out my web resumé for more details :) 
+Welcome to my digital playground! I am a clinical research analyst who loves turning messy data into clear answers. 
+My web résumé (https://supapetr.github.io/), including my CV, tells the rest of my story :).
 
-xoxo, 
+Yours,
 Petr
